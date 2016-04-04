@@ -1,0 +1,11 @@
+/*body {background-color:#dbdbdb;
+}
+*/
+
+table {
+    width: 1000px; height: 30px; text-align: center;
+}
+
+table, th, td {border-collapse: collapse; border: 1px solid black;
+    
+}
