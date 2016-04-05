@@ -1,11 +1,51 @@
-/*body {background-color:#dbdbdb;
-}
-*/
-
-table {
-    width: 1000px; height: 30px; text-align: center;
+/* Farven på body (baggrundsfarven for sitet) */
+body {background-color:#f4f4f4;
 }
 
-table, th, td {border-collapse: collapse; border: 1px solid black;
-    
+/* Class selector der viser en border samt collapser dem */
+.border {
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+/* Class selector til tabellen som indeholder den statiske topbar (Logo, Profil, samt menuerne) */
+.topbar {
+	margin:0 auto;
+	width:1000px;
+	height:100%;
+	padding:0px 0px 0px 0px;
+    table-layout: fixed;
+    vertical-align: top;
+}
+
+/* Class selector til en tabel inde i en tabel */
+.boxbox {
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	padding:0px 0px 0px 0px;
+    table-layout: fixed;
+}
+
+/* Id selector som "left-aligner" teksten til "hjem" knappen */
+#homebutton {
+    text-align: left;
+}
+
+/* Id selector som "right-aligner" teksten til "profil" knappen */
+#profilebutton {
+    text-align: right;
+}
+
+/* Class selector til menu knapperne */
+.menubutton {
+    text-align: center;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+/* Class selector til text align */
+.textalign {
+    text-align: center;
+    border-collapse: collapse;
 }
