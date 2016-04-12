@@ -21,8 +21,16 @@
 							<table class="boxbox">
 								<tbody>
 									<tr>
-										<td colspan="2" id="homebutton">Indsæt billede her, med tekst under.</td>
-										<td colspan="2" id="profilebutton">Indsæt billede her, med tekst under.</td>
+										<td colspan="2" id="homebutton">
+											<a href="">
+												<img src="\P2_Projekt\images\bedrefodbold_logo.png" width="128" height="128" alt="">
+											</a>
+										</td>
+										<td colspan="2" id="profilebutton">
+											<a>
+												<img src="\P2_Projekt\images\profil.png" width="60" height="80" alt="">
+											</a>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -44,7 +52,9 @@
 									<tbody>
 										<tr>
 											<!-- Venstre side af midten -->
-											<td>Menupunkt</td>
+											<td>
+												<iframe src="https://calendar.google.com/calendar/embed?showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;hl=da&amp;bgcolor=%23ffffff&amp;src=hq7gp5ii3mm04spr9i237j4o5c%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=Europe%2FCopenhagen" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+											</td>
 											<!-- Højre side af midten -->
 											<td>
 												<table class="boxbox border textalign">
