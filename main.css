@@ -1,6 +1,112 @@
 /* Farven på body (baggrundsfarven for sitet) */
 body {background-color:#f4f4f4;
+font-family: Roboto, sans-serif;
 }
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 250px;
+    background-color: lightgrey;
+}
+
+
+.flex-homeprofile {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 120px;
+    background-color: lightgrey;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.flex-menubuttons {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    background-color: lightgrey;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-menuitem {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    text-align: center;
+    font: 20px Roboto;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+}
+
+.flex-home {
+    background-color: cornflowerblue;
+    width: auto;
+    height: auto;
+}
+
+.flex-profile {
+    background-color: cornflowerblue;
+    width: auto;
+    height: auto;
+    direction: rtl;
+    flex-direction: row-reverse;
+}
+
+/* Menuknapperne */
+.btn {
+  background: #CCC;
+  color: #FFF;
+  display: inline-block;
+  border-radius: 0px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-decoration: none; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Class selector der viser en border samt collapser dem */
 .border {
