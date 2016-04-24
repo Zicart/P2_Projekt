@@ -17,6 +17,15 @@ font-family: Roboto, sans-serif;
     background-color: lightgrey;
 }
 
+.flex-container-center {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 250px;
+    background-color: lightgrey;
+    margin: auto;
+}
+
 
 .flex-homeprofile {
     display: -webkit-flex;
