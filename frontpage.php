@@ -25,11 +25,15 @@
 		
 		<div class="flex-container center">
 			Indsæt tekst der beskriver hjemmesiden her.
+			<?php
+echo file_get_contents("player\player_calendar.php");
+?>
+			
 		</div>
 	</div>
 
 <?php
-
+echo file_get_contents("player\player_calendar.php");
 ?>
 
 </body>

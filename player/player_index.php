@@ -25,6 +25,8 @@
 	
 	<p></p>
 	
+
+	
 	<div class="flex-menubuttons center">
 		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_teampage.php">Holdnavn</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_calendar.php">Kalender</a>

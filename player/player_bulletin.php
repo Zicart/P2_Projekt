@@ -34,9 +34,6 @@
 
 	<p></p>
 
-	<div class="flex-menubuttons center">
-
-	</div>
 
 
 			<!-- Temp. debug		
