@@ -29,7 +29,7 @@
 		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_teampage.php">Holdnavn</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_calendar.php">Kalender</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_statistics.php">Statistikker</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_bulletin.php">Nyheder</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\messageboard\mbindex.php?MBID=3">Opslagstavle</a>
 	</div>
 
 	<p></p>

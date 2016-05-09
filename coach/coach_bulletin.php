@@ -29,14 +29,12 @@
 		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Holdstyring</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_calendar.php">Kalender</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_statistics.php">Statistikker</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_bulletin.php">Nyheder</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\messageboard\mbindex.php?MBID=3">Opslagstavle</a>
 	</div>
 
 	<p></p>
 
-	<div class="flex-menubuttons center">
 
-	</div>
 
 
 			<!-- Temp. debug		

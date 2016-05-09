@@ -29,7 +29,7 @@
 		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Holdstyring</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_calendar.php">Kalender</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_statistics.php">Statistikker</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_bulletin.php">Nyheder</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\messageboard\mbindex.php?MBID=3">Opslagstavle</a>
 	</div>
 
 	<p></p>
@@ -41,7 +41,7 @@
 
 			-->
             
-<div class="flex-container-center">
+<div class="flex-messageboard center">
 <?php
     if (!isset($_GET['MBID'])) exit;
     $db = mysqli_connect("localhost", "root", "", "mb");
@@ -53,9 +53,10 @@
 
         extract($parent, EXTR_PREFIX_ALL, "msg");
         $msg_DateSubmitted = date("d/m/y", $msg_DateSubmitted);
-        echo "<div class='center textalign'><A HREF=\"read.php?Msg=$msg_ID\">$msg_Title</a> slået op af $msg_Poster den $msg_DateSubmitted</div>";
+        echo "<div class='font12'><a class='mbbutton2' href=\"read.php?Msg=$msg_ID\">$msg_Title</a> slået op af $msg_Poster den $msg_DateSubmitted</div></br>";
         $result = mysqli_query($db, "SELECT ID, Title, Poster, DateSubmitted FROM mbmsgs WHERE MBID = $mbID AND Parent = $msg_ID ORDER BY DateSubmitted DESC;");
     
+		//Sørger for at alle svar til et opslag er indenteret
         if (mysqli_num_rows($result)) {
             echo "<ul>";
             while ($row = mysqli_fetch_assoc($result)) {
@@ -79,8 +80,8 @@
     }
 ?>
 </div>
-<div class="flex-menubuttons center">
-<a href="post.php?MBID=<?php echo $_GET['MBID']; ?>">Skriv nyt opslag</a>
+<div class="flex-messageboard center">
+<a class="mbbutton2" href="post.php?MBID=<?php echo $_GET['MBID']; ?>">Skriv nyt opslag</a>
 </div>
 
 </body>

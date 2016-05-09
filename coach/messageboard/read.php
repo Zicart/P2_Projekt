@@ -1,3 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="da">
+
+<html>
+<head>
+	<title>Beskeder</title>
+	<meta charset="ISO-8859-1">
+    <meta name="keywords" content="coach">
+	<link rel="stylesheet" href="\P2_Projekt\main.css">
+</head>
+
+<body>
+	<div class="flex-homeprofile center">
+		<div class="flex-home">
+			<a href="\P2_Projekt\coach\coach_index.php">
+				<img src="\P2_Projekt\images\bedrefodbold_logo.png" width="96" height="96" alt="">
+			</a>
+		</div>
+		<div class="flex-profile">
+			<a href="profilepage.php">
+				<img src="\P2_Projekt\images\profil.png" width="60" height="80" alt="">
+			</a>
+		</div>
+	</div>
+	
+	<p></p>
+	
+	<div class="flex-menubuttons center">
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Holdstyring</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_calendar.php">Kalender</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_statistics.php">Statistikker</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\messageboard\mbindex.php?MBID=3">Opslagstavle</a>
+	</div>
+
+	<p></p>
+
+
+
+
+			<!-- Temp. debug		
+
+			-->
+            
 <?php
     if (!isset($_GET['Msg'])) exit; //Sanity check. Hvis $Msg ikke er sat, så stopper handlingen.
     $db = mysqli_connect("localhost", "root", "", "mb");
@@ -9,9 +52,9 @@
     extract(mysqli_fetch_array($result), EXTR_PREFIX_ALL, 'msg');
     
     $msg_DateSubmitted = date("d/m/y", $msg_DateSubmitted);
-    echo "Slået op af $msg_Poster</a> den $msg_DateSubmitted<br />";
-    echo "$msg_Message<br /><br />";
-    echo "<a href=\"post.php?Parent={$_GET['Msg']}&MBID=$msg_MBID\"> Svar på opslag</a>"; //For at svare på et opslag linkes der tilbage til "post.php", hvor beskedens ID sendes som "Parent" nummeret.
-    echo "<a href=\"edit.php?Msg={$_GET['Msg']}&MBID=$msg_MBID\">Rediger dette opslag</a>";
-    echo "<a href=\"delete.php?Msg={$_GET['Msg']}&MBID=$msg_MBID\">Slet dette opslag</a>";
+    echo "<div class='flex-messageboard center'><b>Slået op af $msg_Poster</a> den $msg_DateSubmitted<br/></div></b> ";
+    echo "<div class='flex-messageboard center'>$msg_Message<br /><br /> </div>";
+    echo "<div class='flex-messageboard center'><a class='mbbutton2' href=\"post.php?Parent={$_GET['Msg']}&MBID=$msg_MBID\">Svar på opslag</a>"; //For at svare på et opslag linkes der tilbage til "post.php", hvor beskedens ID sendes som "Parent" nummeret.
+    echo "<a class='mbbutton2' href=\"edit.php?Msg={$_GET['Msg']}&MBID=$msg_MBID\">Rediger dette opslag</a>";
+    echo "<a class='mbbutton2' href=\"delete.php?Msg={$_GET['Msg']}&MBID=$msg_MBID\">Slet dette opslag</a> </div>";
 ?>

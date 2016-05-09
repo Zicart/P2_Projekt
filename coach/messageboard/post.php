@@ -1,3 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="da">
+
+<html>
+<head>
+	<title>Beskeder</title>
+	<meta charset="ISO-8859-1">
+    <meta name="keywords" content="coach">
+	<link rel="stylesheet" href="\P2_Projekt\main.css">
+</head>
+
+<body>
+	<div class="flex-homeprofile center">
+		<div class="flex-home">
+			<a href="\P2_Projekt\coach\coach_index.php">
+				<img src="\P2_Projekt\images\bedrefodbold_logo.png" width="96" height="96" alt="">
+			</a>
+		</div>
+		<div class="flex-profile">
+			<a href="profilepage.php">
+				<img src="\P2_Projekt\images\profil.png" width="60" height="80" alt="">
+			</a>
+		</div>
+	</div>
+	
+	<p></p>
+	
+	<div class="flex-menubuttons center">
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Holdstyring</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_calendar.php">Kalender</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_statistics.php">Statistikker</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\messageboard\mbindex.php?MBID=3">Opslagstavle</a>
+	</div>
+
+	<p></p>
+
+
 <?php
     if (!isset($_REQUEST['MBID'])) exit;    //Sanity check. Hvis der ikke er givet et MBID (messageboard ID nummer) via GET eller POST, så er der opstået en fejl, og handlingen stoppes.
     if (!isset($_REQUEST['Parent'])) { 
@@ -16,14 +53,15 @@
     
         $result = mysqli_query($db, "INSERT INTO mbmsgs (MBID, Parent, Poster, Title, Message, DateSubmitted) VALUES ({$_REQUEST['MBID']}, $Parent, '$Name', '$Title', '$Message', $CurrentTime);");
         if ($result) {
-            echo "Du har slået en besked op<br /><br />";
-            echo "<A HREF=\"mbindex.php?MBID={$_REQUEST['MBID']}\">Tilbage til opslagstavlen</a>";
+            echo "<div class='flex-messageboard center'>Du har slået en besked op<br /><br /></div>";
+            echo "<div class='flex-messageboard center'><a class='mbbutton2' href=\"mbindex.php?MBID={$_REQUEST['MBID']}\">Tilbage til opslagstavlen</a></div>";
             exit;
         } else {
-            echo "Der var et problem med dit opslag, prøv igen.<br /><br />";
+            echo "<div class='flex-messageboard center'>Der var et problem med dit opslag, prøv igen.<br /><br /></div>";
         }
     }
-?>     
+?>
+<div class="flex-messageboard center">
 <form method="post" action="post.php">
 Navn: <input type="text" name="Name" /><br />
 Overskrift: <input type"text" name="Title" /><br /><br />
@@ -33,3 +71,4 @@ Besked:<BR />
 <input type="hidden" name="Parent" value="<?php echo $Parent; ?>" />
 <input type="submit" value="Post" />
 </form>
+</div>

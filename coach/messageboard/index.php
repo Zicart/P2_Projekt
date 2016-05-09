@@ -26,10 +26,10 @@
 	<p></p>
 	
 	<div class="flex-menubuttons center">
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Holdstyring</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_calendar.php">Kalender</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_statistics.php">Statistikker</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_bulletin.php">Nyheder</a>
+		<a class="btn" href="\P2_Projekt\coach\coach_teampage.php">Holdstyring</a>
+		<a class="btn" href="\P2_Projekt\coach\coach_calendar.php">Kalender</a>
+		<a class="btn" href="\P2_Projekt\coach\coach_statistics.php">Statistikker</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\messageboard\mbindex.php?MBID=3">Opslagstavle</a>
 	</div>
 
 	<p></p>
@@ -41,20 +41,27 @@
 
 			-->
 
+<div class="flex-container-center">
+	<div>
+		<?php
+			$db = mysqli_connect("localhost", "root", "", "mb"); //Forbindelse til databasen.
+			$result = mysqli_query($db, "SELECT ID, Name FROM mblist ORDER BY Name;"); //De data jeg vil trække ud. ID nr. og navn, sorteret efter navn.
+			if (!mysqli_num_rows($result)) { //Sanity check. Hvis ikke der bliver udtrukket noget data.
+				echo "Der er ingen opslagstavler";
+			} else {
+				while ($row = mysqli_fetch_assoc($result)) { //Så længe der er data i tabellen at vise, som opfylder kriterierne.
+					extract($row, EXTR_PREFIX_ALL, "mb"); //Udtræk de data.
+					echo "<div align='left'><a class='mbbutton1' href=\"mbindex.php?MBID=$mb_ID\"> $mb_Name</a><br /></div>"; //Vis dataen.
+				}
+			}
+		?>
+		<br/><br/>
+		<div align="left"><a class="mbbutton2" href="create.php">Opret opslagstavle</a></div>
+	</div>
+</div>
 
-<?php
-    $db = mysqli_connect("localhost", "root", "", "mb");
-    $result = mysqli_query($db, "SELECT ID, Name FROM mblist ORDER BY Name;");
-    if (!mysqli_num_rows($result)) {
-        echo "Der er ingen opslagstavler";
-    } else {
-        while ($row = mysqli_fetch_assoc($result)) {
-            extract($row, EXTR_PREFIX_ALL, "mb");
-            echo "<a href=\"mbindex.php?MBID=$mb_ID\"> $mb_Name</a><br />";
-        }
-    }
-?>     
-<br /><br /><a href="create.php">Opret opslagstavle</a>
+
+
 
 </body>
 </html>

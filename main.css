@@ -9,12 +9,24 @@ font-family: Roboto, sans-serif;
     padding: 0px;
 }
 
+.font10 {
+    font-size: 10px;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
     width: 1000px;
     height: 250px;
-    background-color: lightgrey;
+    background-color: #f4f4f4;
 }
 
 .flex-container-center {
@@ -22,7 +34,7 @@ font-family: Roboto, sans-serif;
     display: flex;
     width: 1000px;
     height: 250px;
-    background-color: lightgrey;
+    background-color: #f4f4f4;
     margin: auto;
 }
 
@@ -49,6 +61,17 @@ font-family: Roboto, sans-serif;
     justify-content: center;
 }
 
+.flex-messageboard {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: auto;
+    background-color: #f4f4f4;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/* Bruges ikke lige pt.
 .flex-menuitem {
     background-color: cornflowerblue;
     width: 100px;
@@ -58,22 +81,20 @@ font-family: Roboto, sans-serif;
     text-align: center;
     font: 20px Roboto;
 }
+*/
 
 .flex-item {
-    background-color: cornflowerblue;
     width: 200px;
     height: 20px;
     margin: 10px;
 }
 
 .flex-home {
-    background-color: cornflowerblue;
     width: auto;
     height: auto;
 }
 
 .flex-profile {
-    background-color: cornflowerblue;
     width: auto;
     height: auto;
     direction: rtl;
@@ -82,23 +103,70 @@ font-family: Roboto, sans-serif;
 
 /* Menuknapperne */
 .btn {
-  background: #CCC;
-  color: #FFF;
-  display: inline-block;
-  border-radius: 0px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-  text-decoration: none; 
+    background-color: #555555; /* Sort */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
+.btn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
 
+.mbbutton1 {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
 
+.mbbutton2 {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
 
+.mbbutton3 {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
 
-
-
-
-
-
+.mbbutton4 {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
 
 
 
