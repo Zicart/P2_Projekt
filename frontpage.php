@@ -12,7 +12,7 @@
 		<h1 align="center">Velkommen til Bedre Fodbold!</h1>
 		
 		<div class="flex-container-center center">
-			<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_index.php">Login som Træner</a>
+			<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_index.php">Login som Tr&aelig;ner</a>
 			<div class="flex-home center">
 				<a>
 					<img src="\P2_Projekt\images\bedrefodbold_logo.png" width="250" height="250" alt="">
@@ -23,18 +23,8 @@
 		
 		<p style="font-size: 20px"></p>
 		
-		<div class="flex-container center">
-			Indsæt tekst der beskriver hjemmesiden her.
-			<?php
-echo file_get_contents("player\player_calendar.php");
-?>
-			
-		</div>
+		<p align="center">Inds&aelig;t tekst der beskriver hjemmesiden her.</p>
 	</div>
-
-<?php
-echo file_get_contents("player\player_calendar.php");
-?>
 
 </body>
 </html>

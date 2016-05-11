@@ -1,0 +1,444 @@
+/* Farven p&aring; body (baggrundsfarven for sitet) */
+body {background-color:#f4f4f4;
+font-family: Roboto, sans-serif;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 250px;
+    background-color: lightgrey;
+}
+
+.flex-container-center {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 250px;
+    background-color: lightgrey;
+    margin: auto;
+}
+.flex-homeprofile {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 120px;
+    background-color: lightgrey;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.flex-menubuttons {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    background-color: lightgrey;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+/*dropdown*/
+.flex-menubuttons-dropdown {
+    display: -webkit-flex;
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    background-color: lightgrey;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.dropbtn{
+    background:#CCC;
+    color: #FFF;
+    border: none;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    text-align: center;
+    font: 20px Roboto;
+    
+}
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background-color:lightgrey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    font: 20px Roboto;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #CCC}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: lightgrey;
+}
+/**********************************/
+.flex-menuitem {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    text-align: center;
+    font: 20px Roboto;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+}
+
+.flex-home {
+    background-color: cornflowerblue;
+    width: auto;
+    height: auto;
+}
+
+.flex-profile {
+    background-color: cornflowerblue;
+    width: auto;
+    height: auto;
+    direction: rtl;
+    flex-direction: row-reverse;
+}
+
+/* Menuknapperne */
+.btn {
+  background: #CCC;
+  color: #FFF;
+  display: inline-block;
+  border-radius: 0px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-decoration: none; 
+}
+
+/*************Statistik tingelinger**************/
+#Content{
+    border: 4px;
+    position: relative;
+    height: 500px;
+}
+
+#divA{
+    border: 1px;
+    position: absolute;
+    background-color: lightgrey;
+    margin-right: 25px;
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+    right: 40%;
+    margin: 10px;
+}
+
+#divB{
+    border: 1px;
+    position: absolute;
+    background-color: lightgrey;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    left: 60%;
+    margin-left: 25px;
+}
+        
+#picture{
+    margin: 10px;
+    width: 170px;
+    height: 122px;
+    float: left;
+}
+#info{
+    margin:10px;
+    float: left;
+    font: 15px Roboto;
+}
+
+#description{
+    margin: 10px 10px 10px 10px;
+    border: 2px darkgrey;
+    border-style: solid;
+    position: absolute;
+    height: 60%;
+    top: 170px;
+    width: 93%;
+    font: 15px Roboto;
+}
+
+table.ex2 {
+    width: 1000px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-menuitemsin {
+    background-color: lightgrey;
+    width: 500px;
+    height: 350px;
+    line-height: 30px;
+    margin: auto;
+    font: 20px Roboto;
+}   
+.button{
+    background-color: lightgrey;
+    border: 1 px;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float: right;
+}
+.button5:hover{
+    background-color:#555555;
+    color: white;
+}
+
+.container{
+    width: 100px;
+    height: 200px;
+    margin: 40px;
+}
+.prec{
+    top: 50px;
+    position: relative;
+    font-size: 40px;
+}
+
+.circle{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: green;
+}
+
+.active-border{
+    position: relative;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+
+    background-color:#58fc0a;
+    background-image:
+        linear-gradient(162deg, transparent 50%, #112b04 50%),
+        linear-gradient(90deg, #112b04 50%, transparent 50%);
+}  
+.container2{
+    width: 100px;
+    height: 200px;
+    margin: 40px;
+    float: right;
+    display: inline;
+}
+
+.circle2{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: #424448;
+    color:white;
+}
+.container3{
+    width: 100px;
+    height: 200px;
+    margin: 0.1px;
+    float: right;
+    display: inline;
+}
+.circle3{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: green;
+}
+.active-border3{
+    position: relative;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+
+    background-color:#58fc0a;
+    background-image:
+        linear-gradient(162deg, transparent 50%, #112b04 50%),
+        linear-gradient(90deg, #112b04 50%, transparent 50%);
+}
+
+.prec3{
+    top: 25px;
+    position: relative;
+    font-size: 40px;
+}
+
+.flex-menuside {
+    display: -webkit-flex;
+    display: flex;
+    width: 100px;
+    height: 10px;
+    background-color: lightgrey;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-homes {
+    background-color: lightgrey;
+    width: 30px;
+    height: auto;
+}
+
+.flex-menuitemsins {
+    background-color: lightgrey;
+    width: auto;
+    height: auto;
+    line-height: 30px;
+    margin: auto;
+    font: 20px Roboto;
+    float: right;
+}
+
+#infos{
+    float: center;
+    font: 15px Roboto;
+    width: 400px;
+    background-color: white;
+}
+
+#Contents{
+    position: relative;
+    height: 500px;
+    background-color: #f2f2f2;
+}
+
+#divAs{
+    position: absolute;
+    background-color: #f2f2f2;
+}
+
+#divBs{
+    border: 1px;
+    position: absolute;
+    background-color: lightgrey;
+    margin-left: 110px;
+    width: 890px;
+    height: auto;
+
+}
+/************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Class selector der viser en border samt collapser dem */
+.border {
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+/* Class selector til tabellen som indeholder den statiske topbar (Logo, Profil, samt menuerne) */
+.topbar {
+	margin:0 auto;
+	width:1000px;
+	height:100%;
+	padding:0px 0px 0px 0px;
+    table-layout: fixed;
+    vertical-align: top;
+}
+
+/* Class selector til en tabel inde i en tabel */
+.boxbox {
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	padding:0px 0px 0px 0px;
+    table-layout: fixed;
+}
+
+/* Id selector som "left-aligner" teksten til "hjem" knappen */
+#homebutton {
+    text-align: left;
+}
+
+/* Id selector som "right-aligner" teksten til "profil" knappen */
+#profilebutton {
+    text-align: right;
+}
+
+/* Class selector til menu knapperne */
+.menubutton {
+    text-align: center;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+/* Class selector til text align */
+.textalign {
+    text-align: center;
+    border-collapse: collapse;
+}

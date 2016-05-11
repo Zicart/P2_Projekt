@@ -20,16 +20,19 @@
 			<a href="profilepage.php">
 				<img src="\P2_Projekt\images\profil.png" width="60" height="80" alt="">
 			</a>
+			<a href="\P2_Projekt\frontpage.php">
+				<img src="\P2_Projekt\images\logout.png" width="80" height="40" alt="">
+			</a>
 		</div>
 	</div>
 	
 	<p></p>
 	
 	<div class="flex-menubuttons center">
-		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_teampage.php">Holdnavn</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_teampage.php">Holdstyring</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_calendar.php">Kalender</a>
 		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_statistics.php">Statistikker</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\messageboard\mbindex.php?MBID=3">Opslagstavle</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\player\player_messageboard\mbindex.php?MBID=3">Opslagstavle</a>
 	</div>
 	
 	<p style="font-size: 24px"></p>
