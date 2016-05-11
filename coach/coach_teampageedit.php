@@ -1,7 +1,7 @@
 <?php
 
 
-    //********************** OPS&AELIG;TNING AF DB **********************
+    //********************** OPSÆTNING AF DB **********************
         $db_hostname = 'localhost';
 		$db_database = 'prog';
 		$db_username = 'root';
@@ -20,7 +20,7 @@
         die("Kunne ikke v&aelig;lge database: " . mysqli_connect_error());
     }
 
-    //********************** HVIS DER ER TRYKKET P&ARING; GEM, S&ARING; SKRIV TIL DB OG RETURNER TIL SIDEN edit_data.php **********************
+    //********************** HVIS DER ER TRYKKET PÅ GEM, SÅ SKRIV TIL DB OG RETURNER TIL SIDEN edit_data.php **********************
     if(isset($_POST['saved'])){
         $name = $_POST['name'];
         $age = $_POST['age'];
@@ -29,7 +29,7 @@
 		$email = $_POST['email'];
 		$describtion = $_POST['describtion'];
         
-        $insert_query = "UPDATE users SET " . "name=" . "'" . $name . "'" . " , " . "age=" . "'" . $age . "'" . " , " . "birthdate=" . "'" . $birthdate . "'" . " ," . "number=" . "'" . $number . "'" . " , " . "email=" . "'" . $email . "'" . " , " . "describtion=" . "'" . $describtion . "'" . " WHERE " . "name=" . "'" . $name . "'";
+        $insert_query = "UPDATE users SET " . "name=" . "'" . $name . "'" . ", " . "age=" . "'" . $age . "'" . ", " . "birthdate=" . "'" . $birthdate . "'" . "," . "number=" . "'" . $number . "'" . ", " . "email=" . "'" . $email . "'" . ", " . "describtion=" . "'" . $describtion . "'" . " WHERE " . "name=" . "'" . $name . "'";
         
         $result = mysqli_query($connection, $insert_query);
        
@@ -38,16 +38,16 @@
                 die ("Database adgang n&aelig;gtet: " . mysqli_connect_error());
             }
             
-        header( 'Location: coach_teampage.php' ) ;
+        header( 'Location: coach_teampage.php' ) ;  //HEr HER HER HER HER HER HER HER HER HER
        }
     
     
-    //********************** FREMS&OSLASH;G R&AELIG;KKE MED VALGT BRUGER **********************
+    //********************** FREMSØG RÆKKE MED VALGT BRUGER **********************
     
         $name = $_POST['edit_user'];
     
        //Angiver en streng som definerer, hvilken query der skal udf&oslash;res
-       $fetch_query = "SELECT * FROM users WHERE name=" . "'" . $name . "'";
+       $fetch_query = "SELECT * FROM users WHERE name='Anders Levorsen'";
               
        //Udtr&aelig;k resultatet (som defineret via $fetch_query)
        $result = mysqli_query($connection, $fetch_query);
@@ -60,7 +60,7 @@
        //Konverterer SQL resultatet til et PHP array (associativt, 2-dimensionalt)
        $fetched_array = mysqli_fetch_all($result, MYSQL_ASSOC);
        
-    //********************** INDS&AELIG;T R&AELIG;KKE I TABEL + INDS&AELIG;T V&AELIG;RDIER I  INPUT FELTERNE **********************
+    //********************** INDSÆT RÆKKE I TABEL + INDSÆT VÆRDIER I  INPUT FELTERNE **********************
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="da">
@@ -104,51 +104,50 @@
 <div id="Contents" class="flex-container-center" style="margin-top: 15px;">
         <div id="divAs" >
         <div class="flex-homes">
-		<a class="flex-menuitem btn" href="#">Anders L.</a>
-		<a class="flex-menuitem btn" href="#">Andreas J.</a>
-		<a class="flex-menuitem btn" href="#">Christian O.</a>
-		<a class="flex-menuitem btn" href="#">Claus L.</a>
-		<a class="flex-menuitem btn" href="#">Jeppe P.</a>
-		<a class="flex-menuitem btn" href="#">Jesper M.</a>
-		<a class="flex-menuitem btn" href="#">Mads A.</a>
-		<a class="flex-menuitem btn" href="#">Michael L.</a>
-		<a class="flex-menuitem btn" href="#">Morten P.</a>
-		<a class="flex-menuitem btn" href="#">Oliver H.</a>
-		<a class="flex-menuitem btn" href="#">Peter R.</a>
-		<a class="flex-menuitem btn" href="#">Simon F.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Anders L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\AndreasJensen_teampage.php">Andreas J.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ChristianOlesen_teampage.php">Christian O.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ClausLund_teampage.php">Claus L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JeppePedersen_teampage.php">Jeppe P.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JesperMikaelsen_teampage.php">Jesper M.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MadsAndersen_teampage.php">Mads A.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MichaelLund_teampage.php">Michael L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MortenPetersen_teampage.php">Morten P.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\OliverHansen_teampage.php">Oliver H.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\PeterRasmussen_teampage.php">Peter R.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\SimonFrederiksen_teampage.php">Simon F.</a>
 		</div>
         </div>
         <div id="divBs">
-		<form action="coach_teampageedit.php" method="post">
-            <table>
+			 <form action="coach_teampageedit.php" method="post">  <!-----HER HER HER HER HER HER HER HER HER HER HER HER --->
+			<input type="hidden" name="saved" value="yes">
+            <input class="button button5" type="submit" value="Gem">
+
+        <table>
                  <tr>
-                    <td>Navn: <input type="text" name="name" value="<?php echo $fetched_array[0]['name'] ?>" </td>
-					 <td>
-                    <td>
-					<td>
-					<input type="hidden" name="saved" value="yes">
-                            <input type="submit" value="Gem">
-                     </td>
+                    <td><p><b>Navn:</b><input type="text" name="name" value="<?php echo $fetched_array[0]['name'] ?>"></p> </td>
+					 
 				 </tr>
 				 <tr>
-                    <td>Alder:<input type="text" name="age" value="<?php echo $fetched_array[0]['age'] ?>" </td>
+                    <td><p><b>Alder:</b><input type="text" name="age" value="<?php echo $fetched_array[0]['age'] ?>"></p> </td>
 				 </tr>
 				 <tr>
-                    <td> <input type="text" name="birthdate" value="<?php echo $fetched_array[0]['birthdate'] ?>" </td>
+                    <td><p><b>F&oslash;dselsdag: </b> <input type="text" name="birthdate" value="<?php echo $fetched_array[0]['birthdate'] ?>"> </p></td>
 				</tr>
 				 <tr>
-                    <td>Mobil nummer: <input type="text" name="number" value="<?php echo $fetched_array[0]['number'] ?>" </td>
+                    <td><p><b>Mobil nummer: </b><input type="text" name="number" value="<?php echo $fetched_array[0]['number'] ?>"> </p></td>
 				</tr>
 				 <tr>
-					<td>Email: <input type="text" name="email" value="<?php echo $fetched_array[0]['email'] ?>" </td>
+					<td><p><b>Email: </b><input type="text" name="email" value="<?php echo $fetched_array[0]['email'] ?>"> </p></td>
 				</tr>
 				 <tr>
-					<td border="1">Bem&aelig;rkning: <input type="text" name="describtion" value="<?php echo $fetched_array[0]['describtion'] ?>" </td>
+					<td><b>Bem&aelig;rkning: </b></td>
+				 </tr>
+				 <tr>
+					<td valign="top" align= "left" style="border:1px solid #525252; width: 500px; height: 200px;"><input type="text" size="100" name="describtion" value="<?php echo $fetched_array[0]['describtion'] ?>"></td>
 				</tr>
 
-
-
-            </table>
+            </table>    
 
     
 <?php

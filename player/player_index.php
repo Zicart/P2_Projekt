@@ -44,7 +44,7 @@
 			
 			<table>
 				<tr>
-					<td><p style="margin-left:15%; margin-top: 10%; font-size: 20px;">Fremmøde</p></td>
+					<td><p style="margin-left:15%; margin-top: 10%; font-size: 20px;">Fremm&oslash;de</p></td>
 					<td><p style="margin-left:15%; margin-top: 10%; font-size: 20px;">Holdgennemsnit</p></td>
 				</tr>
 				<tr>

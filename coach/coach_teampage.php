@@ -1,7 +1,7 @@
 <?php
 
 
-    //********************** OPS&AELIG;TNING AF DB **********************
+    //********************** OPSÆTNING AF DB **********************
         $db_hostname = 'localhost';
 		$db_database = 'prog';
 		$db_username = 'root';
@@ -20,7 +20,7 @@
         die("Kunne ikke v&aelig;lge database: " . mysqli_connect_error());
     }
     
-    //********************** ER DER TRYKKET P&ARING; SLET? **********************
+    //********************** ER DER TRYKKET PÅ SLET? **********************
     
     /*Tjekker om der er trykket p&aring; en "Delete" knap. Hvis der trykkes p&aring; en delete knap
      *f&aring;r det tilh&oslash;rende hidden felt ("brugernavn") en v&aelig;rdi, nemlig brugernavnet for
@@ -28,7 +28,7 @@
     */
     if(isset($_POST['delete_user'])){
         $brugernavn = $_POST['delete_user'];
-        $delete_query = "DELETE FROM users WHERE username=" . "'" . $brugernavn . "'";
+        $delete_query = "DELETE FROM users WHERE ID_number=" . "'" . $ID_number . "'";
     
         $result = mysqli_query($connection, $delete_query);
         
@@ -38,9 +38,9 @@
     }
     
     
-    //********************** FREMS&OSLASH;G ALLE R&AELIG;KKER **********************
+    //********************** FREMSØG ALLE RÆKKER **********************
        //Angiver en streng som definerer, hvilken query der skal udf&oslash;res
-       $fetch_query = "SELECT * FROM users";
+       $fetch_query = "SELECT * FROM users WHERE name='Anders Levorsen'";   //HER HER HER HER HER HER HER HER HER HER//
               
        //Udtr&aelig;k resultaterne (som defineret via $fetch_query)
        $result = mysqli_query($connection, $fetch_query);
@@ -56,7 +56,7 @@
        //Konverterer SQL resultatet til et PHP array (associativt, 2-dimensionalt)
        $fetched_array = mysqli_fetch_all($result, MYSQL_ASSOC);
 
-    //********************** INDS&AELIG;T R&AELIG;KKER I TABEL + EN MINI FORM TIL HVER R&AELIG;KKE **********************
+    //********************** INDSÆT RÆKKER I TABEL + EN MINI FORM TIL HVER RÆKKE **********************
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="da">
@@ -99,18 +99,18 @@
 
 <!--		<div class="flex-menubuttons center">
 		<div class="flex-homes">
-		<a class="flex-menuitem btn" href="#">Anders L.</a>
-		<a class="flex-menuitem btn" href="#">Andreas J.</a>
-		<a class="flex-menuitem btn" href="#">Christian O.</a>
-		<a class="flex-menuitem btn" href="#">Claus L.</a>
-		<a class="flex-menuitem btn" href="#">Jeppe P.</a>
-		<a class="flex-menuitem btn" href="#">Jesper M.</a>
-		<a class="flex-menuitem btn" href="#">Mads A.</a>
-		<a class="flex-menuitem btn" href="#">Michael L.</a>
-		<a class="flex-menuitem btn" href="#">Morten P.</a>
-		<a class="flex-menuitem btn" href="#">Oliver H.</a>
-		<a class="flex-menuitem btn" href="#">Peter R.</a>
-		<a class="flex-menuitem btn" href="#">Simon F.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Anders L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\AndreasJensen_teampage.php">Andreas J.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ChristianOlesen_teampage.php">Christian O.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ClausLund_teampage.php">Claus L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JeppePedersen_teampage.php">Jeppe P.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JesperMikaelsen_teampage.php">Jesper M.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MadsAndersen_teampage.php">Mads A.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MichaelLund_teampage.php">Michael L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MortenPetersen_teampage.php">Morten P.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\OliverHansen_teampage.php">Oliver H.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\PeterRasmussen_teampage.php">Peter R.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\SimonFrederiksen_teampage.php">Simon F.</a>
 		</div>
 		<div class="flex-menuitemsins">
 			<div style="background-color:#f4f4f4; height: 400px; width: 970px;">
@@ -134,58 +134,52 @@
 <div id="Contents" class="flex-container-center" style="margin-top: 15px;">
         <div id="divAs" >
         <div class="flex-homes">
-		<a class="flex-menuitem btn" href="#">Anders L.</a>
-		<a class="flex-menuitem btn" href="#">Andreas J.</a>
-		<a class="flex-menuitem btn" href="#">Christian O.</a>
-		<a class="flex-menuitem btn" href="#">Claus L.</a>
-		<a class="flex-menuitem btn" href="#">Jeppe P.</a>
-		<a class="flex-menuitem btn" href="#">Jesper M.</a>
-		<a class="flex-menuitem btn" href="#">Mads A.</a>
-		<a class="flex-menuitem btn" href="#">Michael L.</a>
-		<a class="flex-menuitem btn" href="#">Morten P.</a>
-		<a class="flex-menuitem btn" href="#">Oliver H.</a>
-		<a class="flex-menuitem btn" href="#">Peter R.</a>
-		<a class="flex-menuitem btn" href="#">Simon F.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Anders L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\AndreasJensen_teampage.php">Andreas J.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ChristianOlesen_teampage.php">Christian O.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ClausLund_teampage.php">Claus L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JeppePedersen_teampage.php">Jeppe P.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JesperMikaelsen_teampage.php">Jesper M.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MadsAndersen_teampage.php">Mads A.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MichaelLund_teampage.php">Michael L.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MortenPetersen_teampage.php">Morten P.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\OliverHansen_teampage.php">Oliver H.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\PeterRasmussen_teampage.php">Peter R.</a>
+		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\SimonFrederiksen_teampage.php">Simon F.</a>
 		</div>
         </div>
         <div id="divBs">
-           
+					<div style="float: right;">	
+                        <form name="edit" action="coach_teampageedit.php" method="post"> <!-- HER HER HER HER HER HER HER HER   -->
+                            <input class="button button5" type="submit" value="Rediger">
+                            <input type="hidden" name="edit_user" value="<?php echo $fetched_array[$i]['name'] ?>">
+                        </form>
+					</div>
             <table>
 
             <?php
             for($i = 0; $i < $rows; $i++){ ?>
                  <tr>
-                    <td>Navn: <?php echo $fetched_array[$i]['name'] ?> </td>
-					 <td>
-                    <td>
-					<td>
-						
-                        <form name="edit" action="coach_teampageedit.php" method="post">
-                            <input type="submit" value="Redigér">
-                            <input type="hidden" name="edit_user" value="<?php echo $fetched_array[$i]['name'] ?>">
-                        </form>
-                    </td>
-                    <td>
-                        <form name="delete" action="coach_teampage.php" method="post">
-                            <input type="submit" value="Slet">
-                            <input type="hidden" name="delete_user" value="<?php echo $fetched_array[$i]['name'] ?>">
-                        </form>
-                     </td>
+                    <td><p><b>Navn:</b><?php echo $fetched_array[$i]['name'] ?></p> </td>
+					 
 				 </tr>
 				 <tr>
-                    <td>Alder:<?php echo $fetched_array[$i]['age'] ?> </td>
+                    <td><p><b>Alder:</b><?php echo $fetched_array[$i]['age'] ?></p> </td>
 				 </tr>
 				 <tr>
-                    <td> <?php echo $fetched_array[$i]['birthdate'] ?> </td>
+                    <td><p><b>F&oslash;dselsdag: </b> <?php echo $fetched_array[$i]['birthdate'] ?> </p></td>
 				</tr>
 				 <tr>
-                    <td>Mobil nummer: <?php echo $fetched_array[$i]['number'] ?> </td>
+                    <td><p><b>Mobil nummer: </b><?php echo $fetched_array[$i]['number'] ?> </p></td>
 				</tr>
 				 <tr>
-					<td>Email: <?php echo $fetched_array[$i]['email'] ?> </td>
+					<td><p><b>Email: </b><?php echo $fetched_array[$i]['email'] ?> </p></td>
 				</tr>
 				 <tr>
-					<td border="1">Bem&aelig;rkning: <?php echo $fetched_array[$i]['describtion'] ?> </td>
+					<td><b>Bem&aelig;rkning: </b></td>
+				 </tr>
+				 <tr>
+					<td valign="top" align= "left" style="border:1px solid #525252; width: 500px; height: 200px;"><?php echo $fetched_array[$i]['describtion'] ?></td>
 				</tr>
 
 

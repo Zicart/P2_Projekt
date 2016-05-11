@@ -8,7 +8,7 @@ $p->data = array(array(array('Fremm&oslash;de', 3),array('Udeblev', 1), array('M
 $p->chart_type = "pie";
 
 // Common Options
-$p->title = "Fremmøde";
+$p->title = "Fremm&oslash;de";
 
 $out = $p->render('c1');
 ?>
