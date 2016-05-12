@@ -82,10 +82,10 @@
 		</div>
 		<div class="flex-profile">
 			<a href="profilepage.php">
-				<img src="\P2_Projekt\images\profil.png" width="60" height="80" alt="">
+				<img src="\P2_Projekt\images\profil.png" width="40" height="60" alt="">
 			</a>
 			<a href="\P2_Projekt\frontpage.php">
-				<img src="\P2_Projekt\images\logout.png" width="80" height="40" alt="">
+				<img src="\P2_Projekt\images\logout.png" width="60" height="30" alt="">
 			</a>
 		</div>
 	</div>
@@ -104,18 +104,18 @@
 <div id="Contents" class="flex-container-center" style="margin-top: 15px;">
         <div id="divAs" >
         <div class="flex-homes">
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\coach_teampage.php">Anders L.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\AndreasJensen_teampage.php">Andreas J.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ChristianOlesen_teampage.php">Christian O.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\ClausLund_teampage.php">Claus L.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JeppePedersen_teampage.php">Jeppe P.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\JesperMikaelsen_teampage.php">Jesper M.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MadsAndersen_teampage.php">Mads A.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MichaelLund_teampage.php">Michael L.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\MortenPetersen_teampage.php">Morten P.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\OliverHansen_teampage.php">Oliver H.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\PeterRasmussen_teampage.php">Peter R.</a>
-		<a class="flex-menuitem btn" href="\P2_Projekt\coach\player_edit\SimonFrederiksen_teampage.php">Simon F.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\coach_teampage.php">Anders L.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\AndreasJensen_teampage.php">Andreas J.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\ChristianOlesen_teampage.php">Christian O.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\ClausLund_teampage.php">Claus L.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\JeppePedersen_teampage.php">Jeppe P.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\JesperMikaelsen_teampage.php">Jesper M.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\MadsAndersen_teampage.php">Mads A.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\MichaelLund_teampage.php">Michael L.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\MortenPetersen_teampage.php">Morten P.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\OliverHansen_teampage.php">Oliver H.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\PeterRasmussen_teampage.php">Peter R.</a>
+		<a class="flex-menuitem2 btn" href="\P2_Projekt\coach\player_edit\SimonFrederiksen_teampage.php">Simon F.</a>
 		</div>
         </div>
         <div id="divBs">

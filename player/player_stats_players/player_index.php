@@ -37,16 +37,15 @@
 
 	<p></p>
 
-	<div class="flex-menubuttons3 center">
+	<div class="flex-menubuttons2 center">
 		<div class="flex-home"><iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;hl=da&amp;bgcolor=%23FFFFFF&amp;src=usabilitytestb303b%40gmail.com&amp;color=%231B887A&amp;ctz=Europe%2FCopenhagen" style="border-width:0" width="500" height="600" frameborder="0" scrolling="no"></iframe></div>
 		<div class="flex-menuitemsin">
-			<h1 style="margin-left: 15%; ">Andreas Jensen</h1>
-			<button class="mbbutton4" type="button" onclick="location.href='/P2_Projekt/player/player_stats_players/Andreas_Jensenalltime.php'">Se din statistik</button>
+			<p style="margin-left: 15%; ">Andreas Jensen <button class="button button5" type="button" onclick="location.href='/P2_Projekt/player/player_stats_players/Andreas_Jensenalltime.php'">Se statistik</button> </p>
 			
 			<table>
 				<tr>
-					<td><h2 style="margin-left:15%; margin-top: 10%; font-size: 20px;">Fremm&oslash;de</h2></td>
-					<td><h2 style="margin-left:15%; margin-top: 10%; font-size: 20px;">Holdgennemsnit</h2></td>
+					<td><p style="margin-left:15%; margin-top: 10%; font-size: 20px;">Fremm&oslash;de</p></td>
+					<td><p style="margin-left:15%; margin-top: 10%; font-size: 20px;">Holdgennemsnit</p></td>
 				</tr>
 				<tr>
 				<td>

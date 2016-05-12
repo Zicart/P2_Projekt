@@ -9,6 +9,15 @@ font-family: Roboto, sans-serif;
     padding: 0px;
 }
 
+.centercenter {
+    margin: auto;
+}
+
+.flexcenter {
+    align-items: center;
+    justify-content: center;
+}
+
 .font10 {
     font-size: 10px;
 }
@@ -44,7 +53,6 @@ font-family: Roboto, sans-serif;
     display: flex;
     width: 1000px;
     height: 120px;
-    background-color: lightgrey;
     -webkit-justify-content: space-between;
     justify-content: space-between;
     -webkit-align-items: flex-end;
@@ -56,7 +64,6 @@ font-family: Roboto, sans-serif;
     display: flex;
     width: 1000px;
     height: 50px;
-    background-color: lightgrey;
     -webkit-justify-content: center;
     justify-content: center;
 }
@@ -102,6 +109,15 @@ font-family: Roboto, sans-serif;
 }
 */
 
+.flex-menuitem2 {
+    width: 45px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    text-align: center;
+    font: 20px Roboto;
+}
+
 .flex-item {
     width: 200px;
     height: 20px;
@@ -136,6 +152,15 @@ font-family: Roboto, sans-serif;
 }
 
 .btn:hover {
+    background-color: #4CAF50; /* Gr&oslash;n */
+    color: white;
+}
+
+.aside-1:hover {
+    background-color: #4CAF50; /* Gr&oslash;n */
+    color: white;
+}
+.aside-2:hover {
     background-color: #4CAF50; /* Gr&oslash;n */
     color: white;
 }
@@ -188,8 +213,10 @@ font-family: Roboto, sans-serif;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
+    display: block;
+    font-size: 12px;
+    margin: auto;
+    padding: 16px 32px;
 }
 
 
@@ -316,7 +343,6 @@ table.ex2 {
     line-height: 30px;
     margin: auto;
     font: 20px Roboto;
-    background-color: lightgrey;
 }
 
 .flex-menuitemsin2 {
@@ -325,7 +351,7 @@ table.ex2 {
     line-height: 30px;
     margin: auto;
     font: 20px Roboto;
-    background-color: lightgrey;
+
 }
 
 .flex-menuitemsin3 {
@@ -346,11 +372,10 @@ table.ex2 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: auto;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-    float: right;
 }
 .button5:hover{
     background-color:#555555;
@@ -502,7 +527,118 @@ table.ex2 {
 /************************************************************/
 
 
+    @media only screen and (max-width:480px){
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+       
+    }
+    @media only screen and (max-width:768px){
+       /* default iPad screens */
+        .main {
+            -webkit-flex-direction: column; /* Safari */
+            flex-direction:         column;
+        }
+        
+        .main2 {
+            order: 2;
+        }
+        
+        .aside-1 {
+            order: 3;
+        }
+        
+        .aside-2 {
+            order: 3;
+        }
+        .header {
+            order: 1;
+        }
+        
+        .footer {
+            order: 4
+        }
+    }
 
+
+.header {
+    margin: auto;
+    width: 200px;
+    padding: 0px;
+    order: 1;
+}
+
+.footer {
+    margin: auto;
+    width: 200px;
+    padding: 0px;
+    order: 4;
+}
+
+.main {
+    display: -webkit-flex;
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: #f4f4f4;
+    margin: auto;
+}
+
+.main2 {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    order: 2;
+}
+
+.aside-1 {
+    background-color: #555555; /* Sort */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 150px;
+    height: 20px;
+    order: 2;
+}
+
+.aside-2 {
+    background-color: #555555; /* Sort */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 150px;
+    height: 20px;
+    order: 2;
+}
+
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+}
 
 
 /* Class selector der viser en border samt collapser dem */

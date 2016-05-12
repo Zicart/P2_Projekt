@@ -26,5 +26,19 @@
 		<p align="center">Inds&aelig;t tekst der beskriver hjemmesiden her.</p>
 	</div>
 
+
+<div class="wrapper">
+	<div class="header">Header</div>
+			<a class="aside aside-1" href="\P2_Projekt\coach\coach_index.php">Login som Tr&aelig;ner</a>
+			<div class="main2">
+				<a>
+					<img src="\P2_Projekt\images\bedrefodbold_logo.png" width="250" height="250" alt="">
+				</a>
+			</div>
+			<a class="aside aside-2" href="\P2_Projekt\player\player_index.php">Login som Spiller</a>
+	<div class="footer">Footer</div>
+</div>
+
+
 </body>
 </html>

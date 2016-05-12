@@ -18,10 +18,10 @@
 		</div>
 		<div class="flex-profile">
 			<a href="profilepage.php">
-				<img src="\P2_Projekt\images\profil.png" width="60" height="80" alt="">
+				<img src="\P2_Projekt\images\profil.png" width="40" height="60" alt="">
 			</a>
 			<a href="\P2_Projekt\frontpage.php">
-				<img src="\P2_Projekt\images\logout.png" width="80" height="40" alt="">
+				<img src="\P2_Projekt\images\logout.png" width="60" height="30" alt="">
 			</a>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 	<p style="font-size: 24px"></p>
 
 	<div class="flex-menubuttons center">
-		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;hl=da&amp;bgcolor=%23FFFFFF&amp;src=hq7gp5ii3mm04spr9i237j4o5c%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=Europe%2FCopenhagen" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;hl=da&amp;bgcolor=%23ffffff&amp;src=usabilitytestb303b%40gmail.com&amp;color=%231B887A&amp;ctz=Europe%2FCopenhagen" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	</div>
 
 

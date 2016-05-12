@@ -41,10 +41,10 @@ $out = $p->render('c1');
 		</div>
 		<div class="flex-profile">
 			<a href="profilepage.php">
-				<img src="\P2_Projekt\images\profil.png" width="60" height="80" alt="">
+				<img src="\P2_Projekt\images\profil.png" width="40" height="60" alt="">
 			</a>
 			<a href="\P2_Projekt\frontpage.php">
-				<img src="\P2_Projekt\images\logout.png" width="80" height="40" alt="">
+				<img src="\P2_Projekt\images\logout.png" width="60" height="30" alt="">
 			</a>
 		</div>
 	</div>
